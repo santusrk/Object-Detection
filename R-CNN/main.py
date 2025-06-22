@@ -21,7 +21,7 @@ model_path =os.path.join(ROOT_DIR,'R-CNN/src')
 fc2_model_path = os.path.join(model_path,'fc2_model.h5')
 clf_path = os.path.join(model_path,'svm_classifier.pkl')
 reg_path = os.path.join(model_path,'svr_regressor.pkl')
-fc2_model= load_model(fc2_model_path)
+fc2_model= load_model(fc2_model_path, compile=False)
 clf = joblib.load(clf_path)
 reg = joblib.load(reg_path)
 
